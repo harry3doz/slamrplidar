@@ -469,7 +469,7 @@ namespace slamware_ros_sdk {
             laserTrans.setOrigin(tf::Vector3(laserPose.x(), laserPose.y(), 0.0));
             tf::Quaternion qLaserTrans = tf::createQuaternionFromYaw(laserPose.yaw());
             laserTrans.setRotation(qLaserTrans);
-            tfBrdcst.sendTransform(tf::StampedTransform(laserTrans, startScanTime, srvParams.map_frame, srvParams.laser_frame));
+            //tfBrdcst.sendTransform(tf::StampedTransform(laserTrans, startScanTime, srvParams.map_frame, srvParams.laser_frame));
         }
         pubLaserScan_.publish(msgScan);
     }
